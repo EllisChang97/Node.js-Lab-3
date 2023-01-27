@@ -1,0 +1,22 @@
+block variables 
+doctype html 
+html 
+  head
+    meta(charset="utf-8")
+    title #{title} | Test website
+    block scripts 
+      link(rel="stylesheet", type="text/css", href="/styles.css")
+  body
+    header#header 
+      .header-content   
+        h2#site-name 
+          a(href="#") Test site 
+      nav#main-navigation 
+        ul 
+          each link in menu 
+            li 
+              a(href=link.path) #{link.name}
+    main#main 
+      block main-content 
+    footer#footer 
+      p &copy; Copyright HTTP5211, 2023.

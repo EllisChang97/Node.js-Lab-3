@@ -1,0 +1,15 @@
+extends layout 
+
+block main-content 
+  h1.page-title Add a new menu link
+  form(method="post", action="/admin/menu/add/submit")
+    div 
+      label(for="wgt") Weight: 
+      input(type="number", id="wgt", name="weight", min="0")
+    div 
+      label(for="path") Path: 
+      input(type="text", id="path", name="path", placeholder="e.g. /")
+    div 
+      label(for="link-name") Name: 
+      input(type="text", id="link-name", name="name", placeholder="e.g. Home")
+    button(type="submit") Add link

@@ -1,0 +1,9 @@
+extends layout 
+
+block append scripts 
+  //add more scripts to the scripts block from layout.pug
+  script(src="/about.js")
+
+block main-content 
+  h1.page-title #{title}
+  p This is a short blurb about our company.
